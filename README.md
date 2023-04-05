@@ -2753,8 +2753,9 @@ function Library:CreateWindow(WindowTitle)
         Parent = ScreenGui;
     });
 
-    Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed)
-        --if Input.KeyCode == Enum.KeyCode.RightControl or (Input.KeyCode == Enum.KeyCode.RightShift and (not Processed)) then
+    Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed) 
+    local a = 2
+            if a = 2 then
             Outer.Visible = not Outer.Visible;
             ModalElement.Modal = Outer.Visible;
 
