@@ -2754,8 +2754,6 @@ function Library:CreateWindow(WindowTitle)
     });
 
     Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed) 
-    local a = 2
-            if a = 2 then
             Outer.Visible = not Outer.Visible;
             ModalElement.Modal = Outer.Visible;
 
