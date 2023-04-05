@@ -2753,10 +2753,10 @@ function Library:CreateWindow(WindowTitle)
         Parent = ScreenGui;
     });
 
-    --Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed)
+    Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed)
         --if Input.KeyCode == Enum.KeyCode.RightControl or (Input.KeyCode == Enum.KeyCode.RightShift and (not Processed)) then
-            --Outer.Visible = not Outer.Visible;
-            --ModalElement.Modal = Outer.Visible;
+            Outer.Visible = not Outer.Visible;
+            ModalElement.Modal = Outer.Visible;
 
             local oIcon = Mouse.Icon;
             local State = InputService.MouseIconEnabled;
