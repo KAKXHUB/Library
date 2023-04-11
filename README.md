@@ -132,40 +132,5 @@ game.Players.LocalPlayer.SimulationRadiusChanged:Connect(function(radius)
 end);
 ------------------------------------------------
 
-testSection:AddToggle("Toggle", false, function(first)
-    print("ejejejejejeje")
-end)
-
-testSection:AddButton("Button", function(IhateGayPeople)
-    print("button")
-end)
-
-testSection:AddSlider("Slider", 0, 120, 2000, 1, function(State)
-    
-end)
-
-testSection:AddTextbox("textbox", nil, function(State)
-
-end)
-
-testSection:AddDropdown("Dropdown", {"AH", "ytytyt", "rrro", "awhjdajksd"}, "AH", true, function(dropdown)
-
-end)
-
-local ColorToggle = testSection:AddToggle("ColorPicker w/Toggle", false, function(e)
-
-end)
-
-ColorToggle:AddColorpicker(Color3.fromRGB(75, 0,130), function(ztx)
-   
-end)
-
-local ToggleBind = testSection:AddToggle("Keybind w/Toggle", false, function(e)
-
-end)
-
-ToggleBind:AddKeybind()
-
-AimingTab:CreateConfigSystem("right") --this is the config system
 
       
