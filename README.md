@@ -91,7 +91,7 @@ spawn(function()
             if not TeleportMonter or not IsSpawned() then return end;
             for _, Value in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                 if not TeleportMonter then return end;
-                if TeleportMonter[Value.Name] and Value:FindFirstChild("HumanoidRootPart") and Value:FindFirstChild("Humanoid") and Value.Humanoid.Health > 0 then
+                if SelectMonter[Value.Name] and Value:FindFirstChild("HumanoidRootPart") and Value:FindFirstChild("Humanoid") and Value.Humanoid.Health > 0 then
                     if TypePositionDD == "X" then
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Value.HumanoidRootPart.Position + Vector3.new(0, 0, DistanceSD), Value.HumanoidRootPart.Position);
                         if UsingOneHitTG then Value.Humanoid.Health = 0 end;
