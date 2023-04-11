@@ -38,7 +38,7 @@ end)
 
 local testSection = AimingTab:CreateSector("Teleport Monter", "Right")  --you can  change the section code, for example "testsection" can be changed to "FunnyCoolSection" etc.
 
-testSection:AddDropdown("Select Monter", Cache.DevConfig["ListOfMonter"], "", true, function(SLMDD)
+testSection:AddDropdown("Select Monter", Cache.DevConfig["ListOfMonter"], "", false, function(SLMDD)
 SelectMonter = SLMDD
 end)
 
@@ -47,7 +47,7 @@ testSection:AddButton("Set All", function(IhateGayPeople)
     for _, Value in pairs(Cache.DevConfig["ListOfMonter"]) do
         Content[Value] = true;
     end
-    SelectMonter:SetValue(Content);
+    [SelectMonter]:SetValue(Content);
 end)
 
 testSection:AddToggle("Teleport Monter", false, function(TPMTG)
@@ -107,8 +107,8 @@ spawn(function()
     end
 end);
 
-TeleportMonter:OnChanged(function()
-    NoClipTG:SetValue(TeleportMonter);
+[TeleportMonter]:OnChanged(function()
+    [NoClipTG]:SetValue(TeleportMonter);
 end)
 
 game:GetService("RunService").Stepped:Connect(function()
@@ -130,7 +130,5 @@ game.Players.LocalPlayer.SimulationRadiusChanged:Connect(function(radius)
         return radius;
     end
 end);
-------------------------------------------------
-
 
       
