@@ -38,7 +38,7 @@ end)
 
 local testSection = AimingTab:CreateSector("Teleport Monter", "Right")  --you can  change the section code, for example "testsection" can be changed to "FunnyCoolSection" etc.
 
-testSection:AddDropdown("Select Monter", {Cache.DevConfig["ListOfMonter"]}, "", true, function(SLMDD)
+testSection:AddDropdown("Select Monter", Cache.DevConfig["ListOfMonter"], "", true, function(SLMDD)
 SelectMonter = SLMDD
 end)
 
