@@ -47,7 +47,7 @@ testSection:AddButton("Set All", function(IhateGayPeople)
     for _, Value in pairs(Cache.DevConfig["ListOfMonter"]) do
         Content[Value] = true;
     end
-    (SelectMonter):SetValue(Content);
+    SelectMonter:SetValue(Content);
 end)
 
 testSection:AddToggle("Teleport Monter", false, function(TPMTG)
@@ -107,8 +107,8 @@ spawn(function()
     end
 end);
 
-(TeleportMonter):OnChanged(function()
-    (NoClipTG):SetValue(TeleportMonter);
+TeleportMonter:OnChanged(function()
+    NoClipTG:SetValue(TeleportMonter);
 end)
 
 game:GetService("RunService").Stepped:Connect(function()
